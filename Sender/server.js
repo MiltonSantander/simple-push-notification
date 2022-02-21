@@ -9,12 +9,14 @@ firebaseAdmin.initializeApp({
     // databaseURL: "https://push-notification-project-test"
 });
 
+const topic = 'vacation';
+
 const message = {
     notification: {
-        title: "Push notification title",
-        body: "Push notification body"
+        title: "Push notification title - Multiple",
+        body: "Push notification body - Multiple"
     },
-    token: process.env.FIREBASE_REGISTRATION_TOKEN
+    topic: topic
 }
 
 function sendPushNotification(params) {
