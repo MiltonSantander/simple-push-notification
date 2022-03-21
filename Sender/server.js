@@ -1,12 +1,10 @@
 const firebaseAdmin = require("firebase-admin");
 const dotenv = require("dotenv/config");
 const credentials = JSON.parse(process.env.SERVICE_ACCOUNT_CREDENTIALS)
-// const credentials = require("./service-account-credentials.json")
 
 firebaseAdmin.initializeApp({
     credential: firebaseAdmin.credential.cert(credentials),
     projectId: credentials.project_id
-    // databaseURL: "https://push-notification-project-test"
 });
 
 const topic = 'vacation';
